@@ -29,7 +29,7 @@ const addContact = newContact => dispatch => {
 };
 
 const deleteContact = contactId => dispatch => {
-  dispatch(deleteContactRequest(contactId));
+  dispatch(deleteContactRequest());
 
   axios
     .delete(`/contacts/${contactId}`)

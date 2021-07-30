@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { authSelectors } from '../redux/authorization';
@@ -7,22 +8,14 @@ import { authSelectors } from '../redux/authorization';
  * - Если маршрут приватный и пользователь залогинен, рендерит компонент
  * - В противном случае рендерит Redirect
  */
-const PrivateRoute = ({
-  component: Component,
-  isAuthenticated,
-  redirectTo,
-  ...routeProps
-}) => (
-  <Route
-    {...routeProps}
-    render={props =>
-      isAuthenticated ? <Component {...props} /> : <Redirect to={redirectTo} />
-    }
-  />
-);
+function PrivateRoute({ redirectTo, children, ...routeProps }) {
+  const isAuthenticated = useSelector(authSelectors.getIsAuthenticated);
 
-const mapStateToProps = state => ({
-  isAuthenticated: authSelectors.getIsAuthenticated(state),
-});
+  return (
+    <Route {...routeProps}>
+      {isAuthenticated ? children : <Redirect to={redirectTo} />}
+    </Route>
+  );
+}
 
-export default connect(mapStateToProps)(PrivateRoute);
+export default PrivateRoute;
