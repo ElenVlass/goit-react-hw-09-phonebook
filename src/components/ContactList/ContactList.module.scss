@@ -1,0 +1,67 @@
+@import "styles/shared";
+
+.list {
+  margin: 0;
+  padding: 0;
+}
+
+.button {
+  border: 1px solid $button-active;
+  padding: 5px 15px;
+  cursor: pointer;
+  outline: none;
+  color: $button-active;
+  background-color: #fff;
+  border-radius: 3px;
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  &:hover,
+  &:focus {
+    background-color: $button-active;
+    color: #fff;
+    outline: none;
+  }
+}
+
+.span {
+  font-size: 400;
+  color: $button-active;
+  margin-left: 15px;
+  flex-shrink: 4;
+
+  .button:hover &,
+  .button:focus & {
+    background-color: $button-active;
+    color: #fff;
+    outline: none;
+  }
+}
+.item {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid $outline-color;
+  border-radius: 4px;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 450px;
+  background-color: $back-color;
+  &:hover {
+    background-color: $back-emphasis-color;
+  }
+}
+.name {
+  color: $emphasis-text;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 16px;
+    background-image: url("../../icons/person.svg");
+  }
+}

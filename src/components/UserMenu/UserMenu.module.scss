@@ -1,0 +1,27 @@
+@import 'styles/shared.scss';
+
+.button {
+  display: block;
+  font-size: 20px;
+  color: currentColor;
+  padding: 10px 25px;
+  background-color: $bcg-cl-btn;
+  margin-right: 35px;
+  border-radius: 10px;
+  text-decoration: none;
+  &:hover {
+    background-color: $hover-bgd-cl;
+  }
+}
+
+.UserMenu {
+  display: flex;
+  align-items: center;
+}
+.UserName {
+  font-weight: 700;
+  display: inline-block;
+  color: aliceblue;
+  margin-right: 12px;
+  margin-left: 12px;
+}

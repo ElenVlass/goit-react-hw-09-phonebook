@@ -1,0 +1,25 @@
+@import "styles/shared.scss";
+
+.NavLink {
+  display: block;
+  font-size: 20px;
+  color: currentColor;
+  padding: 10px 25px;
+  background-color: $bcg-cl-btn;
+  margin-right: 35px;
+  border-radius: 10px;
+  text-decoration: none;
+  &:hover {
+    background-color: $hover-bgd-cl;
+  }
+}
+
+.NavLink__active {
+  color: $font-cl-active;
+}
+.NavList {
+  display: flex;
+}
+.List {
+  list-style: none;
+}

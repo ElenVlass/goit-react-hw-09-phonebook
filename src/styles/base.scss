@@ -1,0 +1,103 @@
+@import 'styles/shared.scss';
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+}
+
+p {
+  margin-top: 0;
+}
+body {
+  // background: linear-gradient(to bottom, #c6ffdd, #fbd786, #f7797d);
+  background: linear-gradient(to top, #c6ffdd, #fbd786, #f7797d);
+}
+body {
+  margin: 0;
+  padding: 20px;
+  background-color: #fff;
+  color: rgb(130, 62, 161);
+  line-height: 1.3;
+  font-family: 'Helvetica Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  font-size: 30px;
+  color: rgb(98, 96, 211);
+}
+
+p {
+  margin-top: 0;
+}
+.lendosOvervay {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 80px;
+  background-size: cover;
+  background-position: left;
+  background-image: url(../icons/lendos1.jpg);
+
+  @media screen and (min-width: 1200px) {
+    max-width: 1600px;
+    height: 600px;
+    background-image: url(../icons/lendos1.jpg);
+  }
+}
+.lendosTitle {
+  // margin-top: 30px;
+  // margin-bottom: 30px;
+  max-width: 420px;
+  // margin-left: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  padding-bottom: 20px;
+  text-decoration: none;
+  // text-transform: uppercase;
+  text-align: center;
+  background-color: $lendosBcgColor;
+  font-size: 26px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+
+  color: $lendosTitleColor;
+}
+.lendosName {
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: $lendosBcgColor;
+  text-shadow: 2px 2px 4px #000000;
+  font-size: 35px;
+  padding-bottom: 10px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+
+  color: $lendosNameColor;
+}
