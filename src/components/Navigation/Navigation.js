@@ -20,15 +20,16 @@ function Navigation() {
         </NavLink>
       </li>
       <li className={styles.List}>
-        {isAuthenticated && (
-          <NavLink
-            to={routes.contacts}
-            className={styles.NavLink}
-            activeClassName={styles.NavLink__active}
-          >
-            Phonebook
-          </NavLink>
-        )}
+        {/* {isAuthenticated && 
+        ( */}
+        <NavLink
+          to={routes.contacts}
+          className={styles.NavLink}
+          activeClassName={styles.NavLink__active}
+        >
+          Phonebook
+        </NavLink>
+        {/* )} */}
       </li>
     </ul>
   );

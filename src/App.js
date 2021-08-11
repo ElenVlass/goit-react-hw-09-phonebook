@@ -1,6 +1,6 @@
 import React, { Suspense, lazy, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { Switch } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import LoaderSpiner from './components/Loader';
 import Layout from './components/Layout';
 import routes from './routes';
@@ -32,9 +32,9 @@ export default function App() {
     <Layout>
       <Suspense fallback={<LoaderSpiner />}>
         <Switch>
-          <PrivateRoute path={routes.contacts} redirectTo={routes.login}>
+          <Route path={routes.contacts} redirectTo={routes.login}>
             <PhonebookView />
-          </PrivateRoute>
+          </Route>
 
           <PublicRoute path={routes.home} exact>
             <HomeView />
